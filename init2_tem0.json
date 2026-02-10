@@ -1,0 +1,458 @@
+{
+    "claude-opus-4-5-20251101": {
+        "cluster_7": {
+            "cluster_name": "7",
+            "celltype": "Epithelial cells",
+            "subcelltype": "Proliferating Ovarian Cancer Cells",
+            "reasoning": "This cluster shows high expression of proliferation markers including BIRC5 (log2fc=2.861, 55.75%), TPX2 (log2fc=2.764, 55%), SMC4 (log2fc=2.241, 65.42%), and MYBL2 (log2fc=3.033, 49.16%). UCHL1 (log2fc=2.012, 75.71%) is associated with ovarian cancer progression. ESR1 (log2fc=1.412, 75.09%) indicates hormone receptor expression typical of ovarian epithelial tumors. LAPTM4B (log2fc=1.367, 86.35%) is overexpressed in ovarian cancer. CD47 (log2fc=1.518, 90.57%) is a dont-eat-me signal commonly upregulated in cancer. The combination of cell cycle genes (BIRC5, TPX2, SMC4, MYBL2) with cancer-associated markers indicates actively proliferating malignant epithelial cells."
+        },
+        "cluster_8": {
+            "cluster_name": "8",
+            "celltype": "Epithelial cells",
+            "subcelltype": "Secretory Ovarian Cancer Cells",
+            "reasoning": "MUC16 (CA125) expression (log2fc=1.898, 61.49%) is a hallmark of ovarian cancer epithelial cells. H19 (log2fc=2.163, 97%) is an oncogenic lncRNA highly expressed in ovarian cancer. LAPTM4B (log2fc=1.741, 91.37%) and LCN2 (log2fc=1.901, 57.84%) are associated with ovarian cancer progression. ESR1 (log2fc=1.28, 71.31%) indicates estrogen receptor positivity. CP (ceruloplasmin, log2fc=1.817, 74.96%) is a secretory protein. CD47 (log2fc=1.778, 93.81%) provides immune evasion. The presence of MUC16 with secretory markers and lower proliferation signature compared to cluster_7 suggests a more differentiated secretory phenotype of ovarian cancer cells."
+        },
+        "cluster_1": {
+            "cluster_name": "1",
+            "celltype": "Epithelial cells",
+            "subcelltype": "Ovarian Cancer Cells - Classical Subtype",
+            "reasoning": "PLXNB1 (log2fc=2.581, 88.22%) is highly expressed in ovarian cancer. MUC16 (log2fc=1.912, 48.92%) confirms ovarian cancer identity. ESR1 (log2fc=1.598, 64.5%) indicates hormone receptor expression. PVT1 (log2fc=2.26, 67.32%) is an oncogenic lncRNA associated with ovarian cancer. PABPC1L (log2fc=2.117, 57.81%) and RGL3 (log2fc=2.468, 56.88%) are associated with cancer cell signaling. CP (log2fc=1.713, 63.07%) and IMPDH2 (log2fc=1.431, 63.9%) indicate active metabolism. This represents a classical ovarian cancer epithelial population with moderate differentiation."
+        },
+        "cluster_10": {
+            "cluster_name": "10",
+            "celltype": "Epithelial cells",
+            "subcelltype": "Metabolically Active Ovarian Cancer Cells",
+            "reasoning": "H19 (log2fc=1.878, 91.85%) is an oncogenic lncRNA. LAPTM4B (log2fc=1.696, 82.75%) is overexpressed in ovarian cancer. UCHL1 (log2fc=1.753, 62.31%) is associated with cancer progression. Metabolic genes including PKM (log2fc=1.074, 72.34%), HSPD1 (log2fc=1.399, 76.06%), and AHCY (log2fc=1.308, 63.97%) indicate high metabolic activity. HMGA1 (log2fc=1.651, 56.52%) is an oncogenic chromatin modifier. The profile suggests metabolically active cancer cells with elevated protein synthesis machinery (EEF1G, FBL, EIF4G1) without strong proliferation markers."
+        },
+        "cluster_4": {
+            "cluster_name": "4",
+            "celltype": "Epithelial cells",
+            "subcelltype": "Ovarian Cancer Cells - Intermediate State",
+            "reasoning": "EEF1G (log2fc=1.631, 98.5%) indicates high translational activity. LAPTM4B (log2fc=1.276, 62.98%) and H19 (log2fc=1.182, 74.13%) are cancer-associated. CP (log2fc=1.535, 48.73%) and IMPDH2 (log2fc=1.579, 55.48%) suggest active metabolism. TMEM123 (log2fc=1.65, 42.83%) is involved in cell death regulation. The moderate log2fc values across markers and presence of general cancer markers without strong proliferation or differentiation signatures suggest an intermediate cancer cell state."
+        },
+        "cluster_14": {
+            "cluster_name": "14",
+            "celltype": "Epithelial cells",
+            "subcelltype": "Highly Proliferating Ovarian Cancer Cells (G2/M phase)",
+            "reasoning": "Strong expression of G2/M phase markers: TOP2A (log2fc=3.744, 65.83%), TPX2 (log2fc=3.347, 65.41%), BIRC5 (log2fc=3.234, 63.48%), SMC4 (log2fc=2.774, 74.33%), and CENPF (log2fc=3.342, 52.84%). These are canonical cell cycle genes indicating active mitosis. H19 (log2fc=1.867, 95.18%) and LAPTM4B (log2fc=1.558, 87.06%) confirm cancer identity. UCHL1 (log2fc=1.86, 70.15%) and HMGA1 (log2fc=1.899, 70.02%) are cancer-associated. This cluster represents the most actively dividing cancer cell population in G2/M phase."
+        },
+        "cluster_12": {
+            "cluster_name": "12",
+            "celltype": "Epithelial cells",
+            "subcelltype": "Hypoxic Ovarian Cancer Cells",
+            "reasoning": "Strong hypoxia signature: VEGFA (log2fc=2.931, 57.19%), SLC2A1/GLUT1 (log2fc=3.956, 51.83%), LDHA (log2fc=1.923, 79.88%), NDRG1 (log2fc=3.053, 75.91%), and P4HA1 (log2fc=2.55, 46.32%). TFPI2 (log2fc=3.877, 66.01%) is associated with ovarian cancer. AMOTL2 (log2fc=2.286, 67.89%) regulates angiogenesis. H19 (log2fc=2.45, 96.28%) confirms cancer identity. LCN2 (log2fc=2.125, 55.01%) is stress-responsive. This profile indicates cancer cells under hypoxic stress with activated HIF pathway and glycolytic metabolism."
+        },
+        "cluster_18": {
+            "cluster_name": "18",
+            "celltype": "Myeloid cells",
+            "subcelltype": "Tumor-Associated Macrophages (M2-like)",
+            "reasoning": "Classic macrophage markers: C1QC (log2fc=3.408, 81.41%), AIF1/IBA1 (log2fc=2.95, 51.16%), MS4A6A (log2fc=2.764, 46.5%), FCGR2A (log2fc=2.887, 42.54%), and ITGB2 (log2fc=3.325, 42.33%). MSR1/CD204 (log2fc=3.156, 31.06%) is an M2 macrophage marker. CLEC5A (log2fc=4.246, 27.12%) and LIPA (log2fc=2.526, 28.7%) indicate phagocytic activity. SIRPA (log2fc=2.445, 29.79%) interacts with CD47 on tumor cells. FCGBP (log2fc=4.337, 49.67%) is expressed by tissue macrophages. The 1.43% proportion is consistent with tumor-infiltrating macrophages."
+        },
+        "cluster_25": {
+            "cluster_name": "25",
+            "celltype": "Epithelial cells",
+            "subcelltype": "Ciliated Fallopian Tube Epithelial Cells",
+            "reasoning": "Definitive ciliated cell markers with very high log2fc: FOXJ1 (log2fc=5.263, 80.5%) is the master transcription factor for ciliogenesis. CFAP100 (log2fc=7.535, 89.8%), C20orf85 (log2fc=8.384, 86.4%), TPPP3 (log2fc=6.382, 62.25%), TEKT1 (log2fc=7.101, 61.9%), CFAP47 (log2fc=6.312, 61.54%), and FAM183A (log2fc=6.802, 72.27%) are all cilia-associated genes. CDHR4 (log2fc=7.713, 73.35%) is specific to ciliated epithelia. The 0.14% proportion matches the expected rare population from adjacent fallopian tube tissue mentioned in tissue description."
+        },
+        "cluster_5": {
+            "cluster_name": "5",
+            "celltype": "Myeloid cells",
+            "subcelltype": "Tumor-Associated Macrophages (Mixed M1/M2)",
+            "reasoning": "Strong macrophage signature: C1QC (log2fc=5.654, 74.75%), MS4A6A (log2fc=5.397, 47.07%), AIF1 (log2fc=4.51, 42.67%), FCGR2A (log2fc=5.399, 40.78%), CD14 (log2fc=5.525, 31.13%). M2 markers: CD163 (log2fc=5.912, 18.85%), STAB1 (log2fc=5.309, 28.33%), MSR1 (log2fc=4.783, 22.6%). Pro-inflammatory markers: CYBB (log2fc=5.146, 17.91%), NAMPT (log2fc=1.648, 39.1%). The 6.94% proportion indicates substantial macrophage infiltration typical of ovarian cancer TME. Mixed M1/M2 phenotype suggests tumor-educated macrophages."
+        },
+        "cluster_16": {
+            "cluster_name": "16",
+            "celltype": "T cells",
+            "subcelltype": "Cytotoxic CD8+ T cells",
+            "reasoning": "Definitive T cell markers: CD3E (log2fc=6.919, 19.71%), CD3D (log2fc=6.562, 18.71%), TRAC (log2fc=7.064, 43.32%), TRBC1 (log2fc=7.448, 27.73%). CD8A (log2fc=7.603, 30.89%) confirms CD8+ identity. Cytotoxic markers: GZMA (log2fc=7.337, 10.59%), GZMH (log2fc=6.858, 10.33%). Additional T cell markers: CD2 (log2fc=7.142, 17.41%), CD52 (log2fc=6.494, 39.9%), IL7R (log2fc=6.147, 22.52%), CD96 (log2fc=5.765, 12%). CXCR4 (log2fc=3.853, 32.82%) indicates tissue homing. The 2.30% proportion is consistent with tumor-infiltrating lymphocytes in ovarian cancer."
+        },
+        "cluster_2": {
+            "cluster_name": "2",
+            "celltype": "Stromal cells",
+            "subcelltype": "Cancer-Associated Fibroblasts (CAFs) - Matrix-producing",
+            "reasoning": "Strong ECM signature: COL5A1 (log2fc=4.471, 87.15%), COL5A2 (log2fc=4.409, 64.58%), COL11A1 (log2fc=5.289, 45.93%), LUM (log2fc=4.442, 87.02%), DCN (log2fc=2.894, 88.34%), BGN (log2fc=3.986, 91.72%). CAF markers: POSTN (log2fc=3.475, 71.48%), CTHRC1 (log2fc=4.783, 67.89%), THY1 (log2fc=3.33, 50.01%). Matrix remodeling: MMP14 (log2fc=3.865, 76.85%), TIMP2 (log2fc=2.287, 61.3%), TIMP3 (log2fc=2.799, 70.08%), THBS2 (log2fc=4.259, 48.32%). The 8.53% proportion reflects significant stromal component in ovarian cancer."
+        },
+        "cluster_23": {
+            "cluster_name": "23",
+            "celltype": "Mesothelial cells",
+            "subcelltype": "Reactive Mesothelial Cells",
+            "reasoning": "Mesothelial markers: CALB2/Calretinin (log2fc=6.79, 48.34%) is a classic mesothelial marker. PRG4 (log2fc=8.183, 54.39%) is expressed by mesothelial cells. CLDN1 (log2fc=4.575, 87.94%) indicates epithelial characteristics. BNC1 (log2fc=6.156, 43.57%) is a mesothelial transcription factor. Complement genes C4A/C4B (log2fc=3.247-3.611, 66-68%) and CFB (log2fc=3.964, 61.34%) indicate immune activation. PROCR (log2fc=5.068, 64.67%) and KDR (log2fc=4.336, 45.41%) suggest reactive state. The 0.51% proportion is consistent with mesothelial cells from peritoneal surface."
+        },
+        "cluster_22": {
+            "cluster_name": "22",
+            "celltype": "Endothelial cells",
+            "subcelltype": "Tumor Endothelial Cells - Tip cells",
+            "reasoning": "Definitive endothelial markers: FLT1/VEGFR1 (log2fc=6.497, 91.59%), KDR/VEGFR2 (log2fc=5.407, 62.53%), PECAM1 would be expected but PLVAP (log2fc=6.297, 81.14%) and PTPRB (log2fc=4.856, 66.32%) confirm endothelial identity. Tip cell markers: ESM1 (log2fc=7.755, 60.56%) is specific to tip cells. Basement membrane: COL4A1 (log2fc=4.897, 94.45%), COL4A2 (log2fc=3.615, 76.06%), HSPG2 (log2fc=3.264, 73.73%). AQP1 (log2fc=3.6, 70.72%) and ENG (log2fc=4.397, 58.48%) are endothelial markers. The 0.70% proportion matches tumor vasculature."
+        },
+        "cluster_20": {
+            "cluster_name": "20",
+            "celltype": "Epithelial cells",
+            "subcelltype": "Fallopian Tube Secretory Epithelial Cells",
+            "reasoning": "PAX8 (log2fc=2.509, 31.92%) is the master transcription factor for Mullerian epithelium including fallopian tube. MUC1 (log2fc=3.137, 27.41%) is expressed by secretory epithelium. ESR1 (log2fc=1.209, 46.93%) indicates hormone responsiveness. CLDN1 (log2fc=2.444, 37.38%) is an epithelial tight junction protein. AC007906.2 (log2fc=3.964, 42.14%) was also seen in ciliated cells. The absence of ciliated markers (FOXJ1) but presence of PAX8 and secretory markers suggests non-ciliated fallopian tube epithelium. The 0.97% proportion is consistent with adjacent fallopian tube tissue."
+        },
+        "cluster_11": {
+            "cluster_name": "11",
+            "celltype": "Myeloid cells",
+            "subcelltype": "Mast Cells and Granulocytes",
+            "reasoning": "Mast cell markers: MS4A2/Fc\u03b5RI (log2fc=2.513, 0.28%), CMA1/Chymase (log2fc=2.302, 0.31%), HDC/Histidine decarboxylase (log2fc=2.148, 0.24%), KIT (log2fc=1.933, 0.37%). Neutrophil markers: CTSG (log2fc=2.791, 0.4%), CXCR1 (log2fc=2.989, 0.49%), CXCR2 (log2fc=2.695, 0.22%), FPR2 (log2fc=1.871, 0.3%). MNDA (log2fc=1.904, 3.52%) is myeloid-specific. Very low expression percentages suggest this cluster may contain mixed granulocyte populations or represent a sparse myeloid population. SFRP4 expression (log2fc=1.581, 6.64%) may indicate stromal contamination."
+        },
+        "cluster_17": {
+            "cluster_name": "17",
+            "celltype": "Low-quality",
+            "subcelltype": "Low-quality/Ambient RNA",
+            "reasoning": "This cluster shows highly inconsistent marker profile. SOX2-OT (log2fc=3.684, 76.61%) is a lncRNA but other markers show very low expression percentages. DUX4 (log2fc=3.944, 11.68%), LPA (log2fc=3.663, 3.51%), F7 (log2fc=2.562, 5.31%), DRD5 (log2fc=3.519, 3.04%), ADRB1 (log2fc=3.258, 7.3%) are not coherent with any known cell type in ovarian tissue. SOST (log2fc=1.934, 27.06%) is a bone marker. The marker genes lack biological coherence and show expression patterns inconsistent with any physiologically plausible cell type in ovarian cancer tissue. This likely represents technical artifacts or ambient RNA contamination."
+        },
+        "cluster_15": {
+            "cluster_name": "15",
+            "celltype": "Stromal cells",
+            "subcelltype": "Cancer-Associated Fibroblasts (CAFs) - Inflammatory/Activated",
+            "reasoning": "Fibroblast ECM markers: LUM (log2fc=3.094, 53.64%), BGN (log2fc=2.758, 56.99%), DCN (log2fc=2.297, 55.29%), COL5A1 (log2fc=2.179, 37.15%), COL5A2 (log2fc=2.177, 19.22%). Activated CAF markers: CCN2/CTGF (log2fc=2.748, 29.3%), POSTN (log2fc=1.522, 26.43%), CTHRC1 (log2fc=2.353, 21.21%). Inflammatory markers: SERPINE1 (log2fc=2.672, 12.79%), THBS1 (log2fc=2.077, 28.02%). SFRP4 (log2fc=3.157, 23.39%) is associated with CAF subtypes. Lower expression percentages compared to cluster_2 suggest a distinct activated/inflammatory CAF subtype."
+        },
+        "cluster_9": {
+            "cluster_name": "9",
+            "celltype": "Stromal cells",
+            "subcelltype": "Normal Fibroblasts/Quiescent Fibroblasts",
+            "reasoning": "Classic fibroblast markers: DCN (log2fc=3.605, 74.13%), LUM (log2fc=1.384, 30.08%), CCDC80 (log2fc=2.576, 22.25%). C7 (log2fc=5.762, 78.62%) is produced by normal fibroblasts. ABCA8 (log2fc=4.733, 30.3%) and ABCA10 (log2fc=5.878, 38.38%) are lipid transporters in normal stroma. TNXB (log2fc=4.808, 21.25%) is an ECM glycoprotein. Immediate early genes NR4A1 (log2fc=2.444, 36.49%) and KLF4 (log2fc=3.472, 17.84%) suggest responsiveness. MEG3 (log2fc=3.25, 21.26%) is a tumor suppressor lncRNA. Lower CAF-specific markers (POSTN, CTHRC1 absent) suggest more normal-like fibroblasts."
+        },
+        "cluster_13": {
+            "cluster_name": "13",
+            "celltype": "Endothelial cells",
+            "subcelltype": "Tumor Endothelial Cells - Mature/Stalk cells",
+            "reasoning": "Definitive endothelial markers: PECAM1/CD31 (log2fc=4.914, 23.25%), FLT1 (log2fc=4.184, 25.9%), PTPRB (log2fc=5.57, 30.1%), CLDN5 (log2fc=6.762, 19.44%), CD93 (log2fc=4.177, 20.6%). AQP1 (log2fc=5.341, 57.17%) is highly expressed in endothelium. EPAS1/HIF2A (log2fc=3.326, 35.76%) regulates vascular development. CCL14 (log2fc=6.81, 20.34%) is endothelial-specific. EGFL7 (log2fc=5.626, 19.27%) and CAVIN2 (log2fc=4.93, 19.09%) are endothelial markers. Unlike cluster_22, lower ESM1 suggests mature/stalk cell phenotype rather than tip cells. The 4.60% proportion indicates significant tumor vasculature."
+        },
+        "cluster_3": {
+            "cluster_name": "3",
+            "celltype": "Stromal cells",
+            "subcelltype": "Vascular Smooth Muscle Cells (VSMCs)",
+            "reasoning": "Definitive smooth muscle markers: MYH11 (log2fc=5.356, 94.37%) is the gold standard smooth muscle marker. CNN1/Calponin (log2fc=4.918, 69.51%), MYL9 (log2fc=2.466, 75.79%), MYLK (log2fc=3.442, 48.11%), CSRP1 (log2fc=3.443, 41.59%). PLN/Phospholamban (log2fc=4.317, 20.52%) regulates smooth muscle contraction. SYNPO2 (log2fc=3.432, 17.08%) and ITGA7 (log2fc=3.067, 22.91%) are smooth muscle markers. AOC3 (log2fc=3.84, 22.3%) is expressed in vascular smooth muscle. C11orf96 (log2fc=4.338, 70.56%) is smooth muscle-associated. The 7.63% proportion reflects vascular smooth muscle in tumor stroma."
+        },
+        "cluster_24": {
+            "cluster_name": "24",
+            "celltype": "Epithelial cells",
+            "subcelltype": "Stressed/Inflammatory Epithelial Cells",
+            "reasoning": "Epithelial markers: TRIM29 (log2fc=6.057, 57.1%) is epithelial-specific. DSC3 (log2fc=4.86, 53.46%) is a desmosomal protein. EHF (log2fc=3.797, 31.67%) is an epithelial transcription factor. TNS4 (log2fc=7.48, 49.77%) is expressed in epithelial cells. Stress/inflammatory markers: HSPB1 (log2fc=2.646, 64.9%), ATF3 (log2fc=2.636, 34.53%), SOCS3 (log2fc=2.081, 47.69%), CDKN1A (log2fc=1.985, 47.06%), NAMPT (log2fc=1.726, 58.81%). LCN2 (log2fc=3.151, 55.38%) indicates inflammatory response. SLC40A1 (log2fc=3.785, 65.99%) is iron exporter. This represents stressed epithelial cells with inflammatory activation."
+        },
+        "cluster_19": {
+            "cluster_name": "19",
+            "celltype": "Stromal cells",
+            "subcelltype": "Pericytes",
+            "reasoning": "Pericyte markers: PDGFRB (log2fc=3.79, 57.08%) is the canonical pericyte marker. THY1/CD90 (log2fc=4.002, 69.47%) is expressed by pericytes. HEYL (log2fc=4.535, 61.07%) is a Notch target in pericytes. Basement membrane components: COL4A1 (log2fc=5.133, 90.25%), COL4A2 (log2fc=3.935, 73.82%), COL18A1 (log2fc=3.33, 50.07%). BGN (log2fc=3.539, 93.6%) and COL5A1 (log2fc=1.956, 58.8%) indicate ECM production. EPAS1 (log2fc=2.862, 52.07%) is expressed in perivascular cells. ENPEP (log2fc=5.612, 37.18%) is a pericyte marker. The 1.28% proportion is consistent with perivascular pericyte population."
+        },
+        "cluster_6": {
+            "cluster_name": "6",
+            "celltype": "Stromal cells",
+            "subcelltype": "Smooth Muscle Cells - Differentiated/Quiescent",
+            "reasoning": "Smooth muscle markers: MYH11 (log2fc=4.65, 76.25%), CNN1 (log2fc=3.263, 36.29%), MYL9 (log2fc=1.737, 46.91%), MYLK (log2fc=2.18, 20.89%), CSRP1 (log2fc=1.857, 15.06%). PLN (log2fc=2.464, 6.68%) and SYNPO2 (log2fc=2.216, 6.72%) are smooth muscle markers. SMTN/Smoothelin (log2fc=1.855, 4.9%) indicates differentiated smooth muscle. GRIA2 (log2fc=2.592, 3.05%) and MAOB (log2fc=2.176, 3.35%) suggest specialized function. Lower expression percentages compared to cluster_3 and presence of POSTN (log2fc=1.434, 19.41%) suggest a more quiescent or differentiated smooth muscle population."
+        },
+        "cluster_21": {
+            "cluster_name": "21",
+            "celltype": "Stromal cells",
+            "subcelltype": "Activated Pericytes/Perivascular Cells",
+            "reasoning": "Pericyte markers: PDGFRB (log2fc=3.754, 42.09%), HEYL (log2fc=3.563, 30.69%), ITGA7 (log2fc=3.732, 47.92%). Activation markers: ADAMTS1 (log2fc=2.389, 69.1%), ADAMTS4 (log2fc=5.145, 36.31%) are matrix metalloproteinases indicating activation. STEAP4 (log2fc=5.93, 32.66%) is induced by inflammatory cytokines. Stress response: SOCS3 (log2fc=3.004, 52.19%), NR4A1 (log2fc=2.565, 50.33%), CDKN1A (log2fc=2.12, 39.24%). C11orf96 (log2fc=3.007, 65.79%) and TIMP3 (log2fc=2.798, 74.96%) are stromal markers. EPAS1 (log2fc=2.851, 37.96%) indicates hypoxia response. This represents activated perivascular cells responding to tumor microenvironment."
+        }
+    },
+    "gemini-3-pro-preview": {
+        "cluster_7": {
+            "cluster_name": "cluster_7",
+            "celltype": "Epithelial cells",
+            "subcelltype": "Proliferating Ovarian Cancer Cells",
+            "reasoning": "High expression of proliferation markers (SMC4, BIRC5, TPX2, MYBL2) and ovarian cancer markers (PLXNB1, CD47). UCHL1 presence suggests a specific high-turnover tumor state."
+        },
+        "cluster_8": {
+            "cluster_name": "cluster_8",
+            "celltype": "Epithelial cells",
+            "subcelltype": "MUC16+ Ovarian Cancer Cells",
+            "reasoning": "Defined by the classic ovarian cancer marker MUC16 (CA125) along with CD47 and LAPTM4B. Represents the canonical tumor population."
+        },
+        "cluster_1": {
+            "cluster_name": "cluster_1",
+            "celltype": "Epithelial cells",
+            "subcelltype": "Ovarian Cancer Cells",
+            "reasoning": "Expresses general cancer markers (PLXNB1, PVT1, CD47) and epithelial markers (ESR1) without the specific enrichment of MUC16 seen in cluster 8, representing the bulk tumor."
+        },
+        "cluster_10": {
+            "cluster_name": "cluster_10",
+            "celltype": "Epithelial cells",
+            "subcelltype": "Stressed Ovarian Cancer Cells",
+            "reasoning": "Dominated by stress-response and ribosomal genes (HSPD1, EEF1G, YWHAZ) alongside tumor markers (H19, CD47), indicating a stressed tumor subpopulation."
+        },
+        "cluster_4": {
+            "cluster_name": "cluster_4",
+            "celltype": "Epithelial cells",
+            "subcelltype": "Metabolic Ovarian Cancer Cells",
+            "reasoning": "High expression of metabolic and biosynthetic genes (IMPDH2, EEF1G, FBL) within the tumor compartment (CD47, H19), suggesting a metabolically active state."
+        },
+        "cluster_14": {
+            "cluster_name": "cluster_14",
+            "celltype": "Epithelial cells",
+            "subcelltype": "Cycling Ovarian Cancer Cells (G2/M)",
+            "reasoning": "Strong enrichment of G2/M phase specific markers (TOP2A, TPX2, BIRC5, CENPF) confirms this cluster represents actively dividing cancer cells."
+        },
+        "cluster_12": {
+            "cluster_name": "cluster_12",
+            "celltype": "Epithelial cells",
+            "subcelltype": "Hypoxic Ovarian Cancer Cells",
+            "reasoning": "Characterized by hypoxia-inducible genes (NDRG1, VEGFA, SLC2A1, LDHA) and TFPI2, indicating a tumor population in a hypoxic microenvironment."
+        },
+        "cluster_18": {
+            "cluster_name": "cluster_18",
+            "celltype": "Myeloid cells",
+            "subcelltype": "Tumor-Associated Macrophages (TAMs)",
+            "reasoning": "Expresses macrophage lineage markers (AIF1, MSR1) and high levels of complement genes (C1QC), typical of complement-expressing TAMs."
+        },
+        "cluster_25": {
+            "cluster_name": "cluster_25",
+            "celltype": "Epithelial cells",
+            "subcelltype": "Fallopian Tube Ciliated Cells",
+            "reasoning": "Distinct expression of cilia-related genes (FOXJ1, CFAP100, TEKT1), identifying these as normal ciliated epithelial cells likely from the fallopian tube."
+        },
+        "cluster_5": {
+            "cluster_name": "cluster_5",
+            "celltype": "Myeloid cells",
+            "subcelltype": "CD163+ Tumor-Associated Macrophages",
+            "reasoning": "Expresses CD163, CD14, and MS4A6A, indicating an M2-like immunosuppressive macrophage phenotype common in the tumor microenvironment."
+        },
+        "cluster_16": {
+            "cluster_name": "cluster_16",
+            "celltype": "T cells",
+            "subcelltype": "CD8+ Cytotoxic T Cells",
+            "reasoning": "Defined by T cell receptor components (TRAC, CD3D) and cytotoxic effectors (CD8A, GZMA, GZMH), identifying them as killer T cells."
+        },
+        "cluster_2": {
+            "cluster_name": "cluster_2",
+            "celltype": "Stromal cells",
+            "subcelltype": "Cancer-Associated Fibroblasts (CAFs)",
+            "reasoning": "High expression of collagen (COL11A1, COL5A1) and CAF-specific markers (CTHRC1, POSTN, MMP14), indicating activated tumor stroma."
+        },
+        "cluster_23": {
+            "cluster_name": "cluster_23",
+            "celltype": "Stromal cells",
+            "subcelltype": "Mesothelial Cells",
+            "reasoning": "Expresses mesothelial markers (CALB2, PRG4, CLDN1, BNC1), consistent with the mesothelial lining of the ovary/peritoneum."
+        },
+        "cluster_22": {
+            "cluster_name": "cluster_22",
+            "celltype": "Endothelial cells",
+            "subcelltype": "Tumor Endothelial Cells",
+            "reasoning": "Endothelial markers (FLT1, KDR) co-expressed with PLVAP and COL4A1, suggesting tumor-associated vasculature with high permeability."
+        },
+        "cluster_20": {
+            "cluster_name": "cluster_20",
+            "celltype": "Epithelial cells",
+            "subcelltype": "PAX8+ Secretory Epithelial Cells",
+            "reasoning": "Expression of PAX8 and MUC1 identifies these as secretory epithelial cells of ovarian/fallopian origin, distinct from the ciliated population."
+        },
+        "cluster_11": {
+            "cluster_name": "cluster_11",
+            "celltype": "Mast cells",
+            "subcelltype": "Mast Cells",
+            "reasoning": "Identified by highly specific mast cell markers (CMA1, KIT, MS4A2, HDC), despite low detection efficiency typical for this rare granulocyte population."
+        },
+        "cluster_17": {
+            "cluster_name": "cluster_17",
+            "celltype": "Epithelial cells",
+            "subcelltype": "SOX2-OT+ Cancer Stem-like Cells",
+            "reasoning": "Defined by high expression of the lncRNA SOX2-OT and stemness-associated factors (DUX4), suggesting a cancer stem-like cell subpopulation."
+        },
+        "cluster_15": {
+            "cluster_name": "cluster_15",
+            "celltype": "Stromal cells",
+            "subcelltype": "Matrix-Remodeling CAFs",
+            "reasoning": "Fibroblast profile (LUM, DCN) with high expression of matrix-remodeling genes (MMP14, POSTN, LOX family implied), representing a matrix-depositing CAF state."
+        },
+        "cluster_9": {
+            "cluster_name": "cluster_9",
+            "celltype": "Stromal cells",
+            "subcelltype": "C7+ Normal Fibroblasts",
+            "reasoning": "Expresses C7, ABCA8, and ABCA10, which are markers of normal ovarian stromal fibroblasts, distinct from the activated CAFs."
+        },
+        "cluster_13": {
+            "cluster_name": "cluster_13",
+            "celltype": "Endothelial cells",
+            "subcelltype": "Endothelial Cells",
+            "reasoning": "General endothelial markers (PECAM1, CLDN5, AQP1) without the specific tumor-associated enrichment seen in cluster 22."
+        },
+        "cluster_3": {
+            "cluster_name": "cluster_3",
+            "celltype": "Stromal cells",
+            "subcelltype": "Smooth Muscle Cells",
+            "reasoning": "Strong expression of contractile proteins (MYH11, CNN1, MYL9) and ITGA7, identifying these as mature smooth muscle cells."
+        },
+        "cluster_24": {
+            "cluster_name": "cluster_24",
+            "celltype": "Epithelial cells",
+            "subcelltype": "TRIM29+ Stress-Response Epithelial Cells",
+            "reasoning": "Expresses epithelial markers (DSC3) alongside stress/basal markers (TRIM29, HSPB1, SOCS3), indicating a specific stress-responsive epithelial state."
+        },
+        "cluster_19": {
+            "cluster_name": "cluster_19",
+            "celltype": "Stromal cells",
+            "subcelltype": "Pericytes",
+            "reasoning": "Expresses pericyte markers (PDGFRB, COL4A1, HEYL) and lacks strong endothelial markers, consistent with mural cells supporting vasculature."
+        },
+        "cluster_6": {
+            "cluster_name": "cluster_6",
+            "celltype": "Stromal cells",
+            "subcelltype": "Smooth Muscle Cells",
+            "reasoning": "Expresses smooth muscle markers (MYH11, CNN1) similar to cluster 3 but with lower intensity and distinct profile, likely representing a variation in smooth muscle state."
+        },
+        "cluster_21": {
+            "cluster_name": "cluster_21",
+            "celltype": "Stromal cells",
+            "subcelltype": "Activated Pericytes",
+            "reasoning": "Co-expression of pericyte markers (PDGFRB) with activation/remodeling genes (STEAP4, ADAMTS4, TIMP3), suggesting an activated mural cell population."
+        }
+    },
+    "gpt-5.2": {
+        "cluster_7": {
+            "cluster_name": "7",
+            "celltype": "Epithelial cells (tumor)",
+            "subcelltype": "Cycling/proliferative ovarian carcinoma cells",
+            "reasoning": "Key markers support a proliferative epithelial/tumor program: strong cell-cycle/mitotic genes (BIRC5, TPX2, SMC4, MYBL2; high log2fc ~2-3 and broad exp_pct ~49-74%) indicate active division; UCHL1 and HMGA1 are frequently enriched in malignant epithelial states; ESR1 (75% exp) supports Mullerian/ovarian epithelial lineage context; PLXNB1, PVT1 and LAPTM4B are common carcinoma-associated genes. No immune lineage markers (PTPRC, TRAC, MS4A genes) or endothelial markers (PECAM1/KDR) appear, arguing against doublets. Cluster size (6.76%) is plausible for a cycling tumor compartment in ovarian cancer."
+        },
+        "cluster_8": {
+            "cluster_name": "8",
+            "celltype": "Epithelial cells (tumor)",
+            "subcelltype": "MUC16+ ovarian carcinoma cells",
+            "reasoning": "Multiple epithelial/tumor markers are present with high consistency: MUC16 (CA125; 61% exp) is a canonical ovarian cancer epithelial marker; EPC-like polarity/oncogenic signaling genes PRKCI, LAPTM4B, PLXNB1, and CD47 are broadly expressed (77-94% exp) and common in malignant epithelial cells; ESR1 (71% exp) supports Mullerian/serous-lineage tumor context; H19 and PVT1/NORAD are tumor-associated lncRNAs with high exp_pct (H19 97%). Lack of leukocyte (TRAC/PTPRC), fibroblast (COL1A1/LUM/DCN), or endothelial (PECAM1/KDR/CLDN5) markers supports a pure epithelial malignant cluster rather than doublets. Abundance (6.22%) is plausible for a major tumor epithelial state."
+        },
+        "cluster_1": {
+            "cluster_name": "1",
+            "celltype": "Epithelial cells (tumor)",
+            "subcelltype": "ESR1+ MUC16+ ovarian carcinoma cells",
+            "reasoning": "Marker set fits malignant ovarian epithelial identity: MUC16 (49% exp) plus ESR1 (65% exp) indicate Mullerian/ovarian epithelial tumor cells; PLXNB1, PRKCI, LAPTM4B and CD47 are recurrent carcinoma-associated surface/signaling genes with high exp_pct (63-88%); lncRNAs PVT1/NORAD/SNHG15 support tumor biology. Absence of immune (TRAC, MS4A6A), stromal ECM (COL1A1/LUM/DCN), or endothelial (PECAM1/KDR) markers argues against mixed lineage/doublets. Cluster proportion (8.97%) matches a substantial epithelial tumor compartment."
+        },
+        "cluster_10": {
+            "cluster_name": "10",
+            "celltype": "Epithelial cells (tumor)",
+            "subcelltype": "Stress/housekeeping-high ovarian carcinoma cells (H19+ UCHL1+)",
+            "reasoning": "Broad expression of tumor-associated epithelial genes with less lineage-specific structure but consistent carcinoma context: H19 (92% exp), UCHL1 (62% exp), PRKCI, LAPTM4B, CD47 are typical malignant epithelial programs in ovarian cancer; HMGA1 supports transformation. Many markers are RNA-binding/translation/chaperone genes (EEF1G, HSPD1, FBL, EIF4G1, PKM) suggesting a metabolically active/stressed tumor state rather than a distinct normal lineage. No convincing immune/endothelial/fibroblast markers are present, reducing doublet likelihood. Cluster_pct (5.38%) is plausible for a stress/active tumor substate."
+        },
+        "cluster_4": {
+            "cluster_name": "4",
+            "celltype": "Epithelial cells (tumor)",
+            "subcelltype": "Metabolically active ovarian carcinoma cells (EEF1G+ H19+)",
+            "reasoning": "Dominant markers reflect high translation/metabolic activity (EEF1G 98.5% exp, IMPDH2, FBL, HSPD1, YWHAZ) alongside ovarian tumor-associated transcripts (H19, NORAD, LAPTM4B, PRKCI, CD47, CP). The presence of these epithelial/tumor-associated genes without immune (TRAC/PTPRC), stromal ECM (COL1A1/LUM/DCN), or endothelial (PECAM1/KDR/CLDN5) markers supports malignant epithelial identity. Although several markers are generic housekeeping, functional tumor-linked signals (H19, PRKCI, LAPTM4B, CD47, CP) across many cells argue this is a coherent tumor state rather than low-quality. Cluster abundance (6.98%) is plausible."
+        },
+        "cluster_14": {
+            "cluster_name": "14",
+            "celltype": "Epithelial cells (tumor)",
+            "subcelltype": "Highly cycling mitotic ovarian carcinoma cells (TOP2A+ BIRC5+)",
+            "reasoning": "Strong mitotic/cell-cycle signature with high specificity: TOP2A, TPX2, BIRC5, SMC4, CENPF all show high log2fc (~2.8-3.7) and are expressed in a majority of cells (53-74%), defining a cycling population. Co-expression of tumor-associated H19, UCHL1, HMGA1, CD47, LAPTM4B supports malignant epithelial context typical in ovarian cancer. No markers from incompatible lineages (T cell TRAC, macrophage C1QC, endothelial PECAM1) are present, arguing against doublets. Cluster_pct (4.30%) is consistent with a proliferative tumor fraction."
+        },
+        "cluster_12": {
+            "cluster_name": "12",
+            "celltype": "Epithelial cells (tumor)",
+            "subcelltype": "Hypoxic/glycolytic ovarian carcinoma cells (SLC2A1+ VEGFA+)",
+            "reasoning": "Functional markers indicate hypoxia and glycolysis typical of malignant tumor microenvironments: SLC2A1 (GLUT1; very high log2fc 3.956), VEGFA (2.931), NDRG1 (3.053), LDHA (1.923), P4HA1 (2.55) support hypoxia/HIF-associated metabolic remodeling; TFPI2 (3.877) and AMOTL2 add invasive/epithelial tumor-associated context. H19 and CD47 are broadly expressed tumor-associated features. Lack of fibroblast ECM collagens (COL1A1/LUM/DCN), endothelial core markers (PECAM1/KDR/CLDN5), or immune markers supports malignant epithelial assignment rather than microenvironment cells. Cluster_pct (4.72%) is plausible for a hypoxic tumor state."
+        },
+        "cluster_18": {
+            "cluster_name": "18",
+            "celltype": "Myeloid cells",
+            "subcelltype": "C1QC+ macrophages (tumor-associated macrophages, TAM)",
+            "reasoning": "Canonical macrophage/TAM markers dominate: C1QC (high log2fc 3.408; 81% exp), AIF1, MS4A6A, FCGR2A, ITGB2, MSR1, SIRPA, LIPA, IFNGR1 indicate phagocytic myeloid lineage; CLEC5A supports inflammatory myeloid identity. FCGBP can appear in macrophage subsets in tumors. H19 presence is likely ambient/tumor RNA or shared stress transcript and does not outweigh the strong myeloid program. No epithelial markers (EPCAM/KRT/MUC16), T cell markers (TRAC), or endothelial markers (PECAM1) are present to suggest doublets. Low cluster_pct (1.43%) is plausible for a specific TAM subset."
+        },
+        "cluster_25": {
+            "cluster_name": "25",
+            "celltype": "Epithelial cells",
+            "subcelltype": "Ciliated tubal epithelial cells (FOXJ1+ TPPP3+; fallopian-tube contamination)",
+            "reasoning": "Strong, specific cilia program: FOXJ1 (master ciliogenesis TF), TPPP3, TEKT1, CFAP100, CFAP47, FAM183A, ERICH3, CDHR4 are hallmark markers of motile ciliated epithelial cells, matching fallopian tube epithelium and consistent with stated adjacent tubal inclusion. Very high log2fc (5-8+) and high exp_pct across many genes support a clean identity. PLXNB1 likely reflects shared epithelial expression. The very small abundance (0.14%) matches a minor contaminating ciliated population. No immune/stromal/endothelial mixing suggests not a doublet."
+        },
+        "cluster_5": {
+            "cluster_name": "5",
+            "celltype": "Myeloid cells",
+            "subcelltype": "CD163+ STAB1+ tumor-associated macrophages (M2-like TAM)",
+            "reasoning": "Markers indicate differentiated macrophages with scavenger/M2-like TAM features: CD163 (log2fc 5.912), STAB1, MSR1, C5AR1, FCGR2A, ITGB2, AIF1, MS4A6A, C1QC, CYBB support macrophage identity; CD14 suggests monocyte-derived macrophages; FCGBP and SLCO2B1/SGK1 align with TAM programs in tumors. Expression is broad for key lineage markers (e.g., C1QC 75% exp). No epithelial/endothelial/T-cell markers indicate a coherent myeloid cluster, not doublets. Cluster_pct (6.94%) is plausible for TAM-enriched ovarian cancer."
+        },
+        "cluster_16": {
+            "cluster_name": "16",
+            "celltype": "T cells",
+            "subcelltype": "CD8 T cells with IL7R/CXCR4 (memory-like/trafficking)",
+            "reasoning": "Definitive T-cell receptor and pan-T markers: TRAC, TRBC1, CD3D/E, CD2 plus CD52 and IL2RG. CD8A is strongly enriched, indicating CD8 lineage; IL7R suggests a memory-like phenotype (often central-memory/naive-like compared to cytotoxic effectors), while CXCR4 and CD96 support trafficking/activation context seen in tumors. Presence of GZMA/GZMH suggests mild cytotoxic potential but absence of strong effector markers (NKG7, PRF1, GZMB not listed) supports a non-terminal effector state. Expression percentages are moderate (expected for TCR genes in sparse scRNA), and there are no incompatible lineage markers, arguing against doublets. Cluster_pct (2.30%) is plausible for tumor-infiltrating CD8 T cells."
+        },
+        "cluster_2": {
+            "cluster_name": "2",
+            "celltype": "Stromal cells",
+            "subcelltype": "Cancer-associated fibroblasts (CAF), myofibroblastic/ECM-remodeling (COL11A1+ POSTN+ CTHRC1+)",
+            "reasoning": "Strong fibroblast/CAF ECM program: LUM, DCN, BGN, COL5A1/COL5A2 with remodeling/invasion markers COL11A1 (highly specific in ovarian CAF), CTHRC1, POSTN, MMP14, THBS2, SERPINH1, TIMP2/3, THY1. High log2fc (3-5+) and broad exp_pct (46-92%) indicate a robust CAF cluster typical in ovarian cancer stroma. Absence of endothelial (PECAM1/KDR), immune (PTPRC/TRAC), or epithelial tumor markers (MUC16/EPCAM/KRTs) argues against doublets. Cluster abundance (8.53%) fits prominent CAF content in ovarian tumors."
+        },
+        "cluster_23": {
+            "cluster_name": "23",
+            "celltype": "Stromal cells",
+            "subcelltype": "Mesothelial-like/perivascular stromal cells (PROCR+ PRG4+ CLDN1+)",
+            "reasoning": "Marker combination suggests a specialized stromal/lining or perivascular program rather than classic fibroblast or endothelial: PROCR (EPCR; high log2fc 5.068) is seen in vascular-associated/stem-like stromal/pericyte-adjacent populations; PRG4 is characteristic of mesothelial/synovial-like lining cells and has been reported in ovarian/omental surface-associated stromal populations; CLDN1 and DSC3 indicate an epithelial/mesothelial barrier-like phenotype; C4A/C4B/CFB suggest complement-rich mesothelial/stromal activation. KDR present but without PECAM1/CLDN5/ESM1 argues against bona fide endothelial. CALB2 and BNC1 can mark mesothelial/ovarian surface-associated cells. Low cluster_pct (0.51%) is plausible for a rare mesothelial-like stromal compartment; no immune markers suggest not doublets."
+        },
+        "cluster_22": {
+            "cluster_name": "22",
+            "celltype": "Endothelial cells",
+            "subcelltype": "Tip/activated endothelial cells (ESM1+ PLVAP+ FLT1+)",
+            "reasoning": "Clear endothelial identity: FLT1, KDR, PTPRB, PLVAP, ENG, COL4A1/COL4A2, HSPG2, AQP1 are canonical vascular endothelial markers; ESM1 is enriched in activated/tip-like tumor endothelium. High log2fc (4-8) and strong exp_pct (59-94%) support specificity and consistency. Presence of basement membrane collagens (COL4A1/2) reinforces vascular lineage. No pericyte (PDGFRB/RGS5), immune, or epithelial tumor markers indicate a clean endothelial cluster. Small abundance (0.70%) is plausible for endothelial cells in scRNA tumor sampling."
+        },
+        "cluster_20": {
+            "cluster_name": "20",
+            "celltype": "Epithelial cells",
+            "subcelltype": "Mullerian secretory epithelial cells / ovarian carcinoma cells (PAX8+ MUC1+)",
+            "reasoning": "PAX8 is a core Mullerian/secretory lineage TF and a canonical marker for fallopian tube secretory cells and many ovarian carcinomas; MUC1 and BCAM support epithelial identity. CLDN1 suggests epithelial barrier features; ESR1 adds hormone-responsive Mullerian context. Metabolic gene PFKFB3 may indicate glycolytic activation. PLXNB1/SNHG15 are tumor-associated. The marker set lacks immune/endothelial/fibroblast ECM signatures, arguing against doublets. Moderate cluster_pct (0.97%) suggests a smaller secretory/tumor epithelial subpopulation, consistent with mixed ovarian tumor and adjacent tubal tissue."
+        },
+        "cluster_11": {
+            "cluster_name": "11",
+            "celltype": "Myeloid cells",
+            "subcelltype": "Mast cells (KIT+ MS4A2+ HDC+)",
+            "reasoning": "Despite low exp_pct values, the marker panel is highly specific for mast cells: KIT, MS4A2 (FCER1B), CMA1, HDC and CTSG are canonical mast cell/basophil lineage genes; CXCR1/2 and FPR2 can appear in granulocyte-associated programs but the KIT+MS4A2+CMA1+HDC combination is most consistent with mast cells in tissue. Very low cluster_pct (2.95%) with sparse marker detection suggests either low UMI depth for this cluster or stringent DE calling, but lineage specificity outweighs low exp_pct. No epithelial/stromal/endothelial signatures are present, reducing doublet concern. Note: presence of an apparent viral transcript entry is not used for identity due to implausibility/possible artifact."
+        },
+        "cluster_17": {
+            "cluster_name": "17",
+            "celltype": "Epithelial cells (tumor)",
+            "subcelltype": "Aberrant tumor cell state with cancer-testis/ectopic programs (DUX4+ ANKRD30A+)",
+            "reasoning": "Marker set suggests a rare malignant epithelial program with ectopic/cancer-testis-like expression: DUX4 (ectopic TF seen in aberrant tumor transcriptional states) and ANKRD30A (NY-BR-1; cancer-associated antigen) support tumor identity; PLIN2 indicates lipid-droplet metabolism often up in tumor cells; OSGIN1 indicates stress/oxidative response. KIT appears but without other mast markers (MS4A2/HDC/CMA1) and with strong non-immune context, arguing against mast contamination. Lack of pan-immune markers (PTPRC/TRAC/ITGB2) and ECM fibroblast collagens supports tumor rather than microenvironment. Small cluster_pct (1.87%) fits a rare aberrant tumor state; given unusual gene mix, this cluster should be monitored for potential technical/ambient contributions but is not a clear doublet because mutually exclusive lineage marker sets are not concurrently strong."
+        },
+        "cluster_15": {
+            "cluster_name": "15",
+            "celltype": "Stromal cells",
+            "subcelltype": "Cancer-associated fibroblasts (CAF), pro-fibrotic/contractile-like (SFRP4+ CCN2+ THBS1+)",
+            "reasoning": "Fibroblast identity supported by LUM, DCN, BGN, COL5A1/COL5A2 with remodeling regulators TIMP3, SERPINE1, THBS1 and matricellular genes CCN1/CCN2, plus SFRP4. POSTN/CTHRC1/MMP14 indicate activated CAF behavior though at lower exp_pct than cluster_2, consistent with a CAF substate rather than a different lineage. No endothelial (PECAM1/KDR), immune (TRAC/PTPRC), or epithelial tumor markers (MUC16/PAX8/KRT) are present. Cluster_pct (2.75%) matches a smaller CAF subset."
+        },
+        "cluster_9": {
+            "cluster_name": "9",
+            "celltype": "Stromal cells",
+            "subcelltype": "Inflammatory/activated fibroblasts (NR4A1+ SOCS3+ DCN+)",
+            "reasoning": "Stromal fibroblast markers DCN and LUM are present with activation/immediate-early response genes NR4A1, KLF4, SOCS3 and ECM modulators CCN1, THBS1, TNXB, CCDC80, PAMR1, MEG3. C7 suggests complement-associated inflammatory activation sometimes seen in fibroblasts in tumor stroma. The combination favors an activated/inflammatory fibroblast state rather than smooth muscle (MYH11/CNN1 absent) or endothelial (PECAM1/KDR absent). Cluster_pct (6.13%) is plausible for a major activated stromal compartment in ovarian cancer."
+        },
+        "cluster_13": {
+            "cluster_name": "13",
+            "celltype": "Endothelial cells",
+            "subcelltype": "Venous/capillary endothelial (CLDN5+ PECAM1+ PTPRB+)",
+            "reasoning": "Endothelial lineage is supported by PECAM1, CLDN5, PTPRB, FLT1, EPAS1, AQP1, CD93, EGFL7 and ENG/SLCO2A1. CCL14 enrichment can mark specific vascular beds (often venous/quiescent-associated chemokine expression). Compared with cluster_22, this cluster looks more canonical junctional endothelium (CLDN5/PECAM1) rather than tip/PLVAP/ESM1-dominant. Marker exp_pct is moderate but coherent and lineage-specific, arguing against doublets. Cluster_pct (4.60%) is plausible for endothelial representation."
+        },
+        "cluster_3": {
+            "cluster_name": "3",
+            "celltype": "Stromal cells",
+            "subcelltype": "Vascular smooth muscle cells (VSMC; contractile MYH11+ CNN1+)",
+            "reasoning": "Strong contractile smooth muscle program: MYH11, CNN1, MYL9, MYLK, CSRP1, PLN, ITGA7, SYNPO2 define VSMC; AOC3 is common in vascular mural/smooth muscle-associated stromal cells; NR4A1/ATF3/CDKN1A indicate activation/stress response. High exp_pct for MYH11 (94%) and CNN1 (70%) supports a robust VSMC identity. Absence of endothelial (PECAM1/KDR/CLDN5) and fibroblast ECM (LUM/DCN/COL1A1) dominance supports mural smooth muscle rather than fibroblasts. Cluster_pct (7.63%) is plausible for stromal-rich tumor sections with abundant vasculature and adjacent tissue."
+        },
+        "cluster_24": {
+            "cluster_name": "24",
+            "celltype": "Epithelial cells (tumor)",
+            "subcelltype": "Stressed/invasive carcinoma cells (TNS4+ TRIM29+ ANXA8+)",
+            "reasoning": "Epithelial/tumor stress and invasion signature: TNS4 (CTEN; strong log2fc 7.48) is linked to integrin/EGFR-driven motility in carcinomas; TRIM29 and ANXA8 are epithelial cancer-associated genes; DSC3 and EHF support epithelial lineage; LCN2 and PLAT indicate inflammatory/proteolytic remodeling; ATF3 and CDKN1A indicate stress and growth arrest responses. SLC40A1 may reflect altered iron handling in tumor cells. Lack of immune (TRAC/PTPRC/ITGB2) and endothelial markers supports a coherent tumor epithelial state rather than doublets. Cluster_pct (0.48%) fits a rare stressed/invasive tumor subpopulation."
+        },
+        "cluster_19": {
+            "cluster_name": "19",
+            "celltype": "Stromal cells",
+            "subcelltype": "Pericytes / vascular mural cells (PDGFRB+ HEYL+ COL4A1+)",
+            "reasoning": "Perivascular mural identity: PDGFRB, HEYL, THY1, NREP and ENPEP support pericyte/mural programs; COL4A1/COL4A2 and COL18A1 indicate basement-membrane association typical of pericytes and vascular-adjacent stromal cells. BGN/SDC2 and SERPINH1 reflect extracellular matrix interaction. Compared to VSMC clusters (MYH11/CNN1), this lacks strong contractile markers, supporting pericytes rather than smooth muscle. No endothelial junction markers (PECAM1/CLDN5) are present, reducing doublet concern. Cluster_pct (1.28%) is plausible for pericytes in tumor vasculature."
+        },
+        "cluster_6": {
+            "cluster_name": "6",
+            "celltype": "Stromal cells",
+            "subcelltype": "Vascular smooth muscle cells (VSMC; contractile, with POSTN+)",
+            "reasoning": "Contractile smooth muscle markers MYH11, CNN1, MYL9, MYLK, CSRP1, SMTN and PDE5A indicate VSMC. Presence of POSTN and OSR2 suggests an activated/remodeling mural phenotype in tumor-associated stroma. Exp_pct is high for MYH11 (76%) with coherent VSMC gene set; low exp_pct for some markers likely reflects heterogeneity/UMI depth but lineage markers remain strong. No endothelial (PECAM1/KDR/CLDN5) or immune markers suggest not doublets. Cluster_pct (6.72%) is plausible for mural cells in vascularized ovarian tumor/adjacent tissue."
+        },
+        "cluster_21": {
+            "cluster_name": "21",
+            "celltype": "Stromal cells",
+            "subcelltype": "Activated pericytes/mural cells (PDGFRB+ ADAMTS4+ STEAP4+)",
+            "reasoning": "Perivascular stromal activation signature: PDGFRB and HEYL support mural/pericyte lineage; ITGA7 and C11orf96 align with contractile/mural programs; ADAMTS4/ADAMTS1 and TIMP3 indicate ECM remodeling; STEAP4 and NR4A1/SOCS3/CDKN1A suggest inflammatory/metabolic activation and stress responses. EPAS1 and C7 can reflect hypoxia/inflammation in vascular-adjacent cells. Lack of endothelial core markers (PECAM1/CLDN5) and absence of strong VSMC contractile genes (MYH11/CNN1) favors pericyte-like mural cells rather than smooth muscle. Cluster_pct (0.73%) fits a rare activated mural subset in tumor vasculature."
+        }
+    }
+}
