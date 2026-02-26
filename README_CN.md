@@ -142,6 +142,34 @@ multillmc annotate \
 }
 ```
 
+## 测试结果查看
+
+测试完成后，可使用网页查看器可视化结果：
+
+```bash
+# 运行测试
+python tests/test_simple.py
+
+# 打开结果查看器
+open tests/results_viewer.html
+```
+
+结果以卡片式布局展示，每个cluster显示：
+- 标记基因列表
+- 各模型的注释结果
+- 共识比例和熵值
+- 详细推理依据
+
+## 测试示例
+
+使用grok-3、deepseek-v3.2、qwen-plus三个模型测试PBMC数据：
+
+| Cluster | 标记基因 | 共识结果 |
+|---------|---------|---------|
+| cluster_0 | CD3D, CD3E, CD3G, IL7R, TCF7 | Naive CD4+ T Cells |
+| cluster_1 | CD79A, CD79B, MS4A1, IGHM, IGKC | Naive B Cells |
+| cluster_2 | CD14, LYZ, S100A8, S100A9, FCN1 | Classical Monocytes |
+
 ## 依赖要求
 
 - Python >= 3.10
