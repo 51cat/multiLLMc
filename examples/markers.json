@@ -1,0 +1,7 @@
+{
+    "cluster_0": ["CD3D", "CD3E", "CD3G", "IL7R", "TCF7"],
+    "cluster_1": ["CD79A", "CD79B", "MS4A1", "IGHM", "IGKC"],
+    "cluster_2": ["CD14", "LYZ", "S100A8", "S100A9", "FCN1"],
+    "cluster_3": ["FCGR3A", "NCR1", "KLRD1", "GNLY", "PRF1"],
+    "cluster_4": ["COL1A1", "COL3A1", "FN1", "VIM"]
+}
