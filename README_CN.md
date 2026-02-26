@@ -142,24 +142,6 @@ multillmc annotate \
 }
 ```
 
-## 测试结果查看
-
-测试完成后，可使用网页查看器可视化结果：
-
-```bash
-# 运行测试
-python tests/test_simple.py
-
-# 打开结果查看器
-open tests/results_viewer.html
-```
-
-结果以卡片式布局展示，每个cluster显示：
-- 标记基因列表
-- 各模型的注释结果
-- 共识比例和熵值
-- 详细推理依据
-
 ## 测试示例
 
 使用grok-3、deepseek-v3.2、qwen-plus三个模型测试PBMC数据：
