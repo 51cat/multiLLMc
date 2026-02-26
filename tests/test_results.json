@@ -1,0 +1,85 @@
+{
+  "metadata": {
+    "species": "human",
+    "tissue": "PBMC",
+    "models": ["grok-3", "deepseek-v3.2", "qwen-plus"],
+    "provider": "n1n"
+  },
+  "clusters": {
+    "cluster_0": {
+      "cluster_id": "cluster_0",
+      "marker_genes": ["CD3D", "CD3E", "CD3G", "IL7R", "TCF7"],
+      "model_annotations": {
+        "grok-3": {
+          "celltype": "Naive CD4+ T Cells",
+          "detail": "CD3D, CD3E, CD3G are canonical T cell markers. TCF7 and IL7R indicate naive phenotype.",
+        },
+        "deepseek-v3.2": {
+          "celltype": "Naive CD4+ T",
+          "detail": "High expression of pan-T cell markers (CD3D/E/G) and IL7R/TCF7 indicates a naive state."
+        },
+        "qwen-plus": {
+          "celltype": "Naive CD4+ T cell",
+          "detail": "CD3D/E/G confirm T lineage; IL7R and TCF7 are canonical markers of naive CD4+ T cells."
+        }
+      },
+      "consensus": {
+        "consensus_cell_type": "Naive CD4+ T Cells",
+        "is_consensus_reached": true,
+        "consensus_proportion": 1.0,
+        "entropy_value": 0.0,
+        "reasoning": "All three models agree on Naive CD4+ T Cells based on CD3D, CD3E, CD3G, IL7R, TCF7 markers."
+      }
+    },
+    "cluster_1": {
+      "cluster_id": "cluster_1",
+      "marker_genes": ["CD79A", "CD79B", "MS4A1", "IGHM", "IGKC"],
+      "model_annotations": {
+        "grok-3": {
+          "celltype": "Naive B Cells",
+          "detail": "CD79A, CD79B, MS4A1 are B cell markers. IGHM and IGKC indicate naive B cells."
+        },
+        "deepseek-v3.2": {
+          "celltype": "Naive B",
+          "detail": "Canonical B cell markers (CD79A/B, MS4A1) with IGHM and IGKC indicating naive B cells."
+        },
+        "qwen-plus": {
+          "celltype": "IgM+ naive B cell",
+          "detail": "CD79A/B and MS4A1 confirm B lineage; IGHM and IGKC indicate immunoglobulin expression for naive B cells."
+        }
+      },
+      "consensus": {
+        "consensus_cell_type": "Naive B Cells",
+        "is_consensus_reached": true,
+        "consensus_proportion": 1.0,
+        "entropy_value": 0.0,
+        "reasoning": "All models agree on Naive B Cells based on CD79A, CD79B, MS4A1, IGHM markers."
+      }
+    },
+    "cluster_2": {
+      "cluster_id": "cluster_2",
+      "marker_genes": ["CD14", "LYZ", "S100A8", "S100A9", "FCN1"],
+      "model_annotations": {
+        "grok-3": {
+          "celltype": "Classical Monocytes",
+          "detail": "CD14 and LYZ are hallmark markers for classical monocytes."
+        },
+        "deepseek-v3.2": {
+          "celltype": "Classical Monocytes",
+          "detail": "Strong CD14 expression with FCN1 defines classical monocytes."
+        },
+        "qwen-plus": {
+          "celltype": "Classical Monocyte",
+          "detail": "CD14 and LYZ are classical monocyte markers; FCN1 further defines this subset."
+        }
+      },
+      "consensus": {
+        "consensus_cell_type": "Classical Monocytes",
+        "is_consensus_reached": true,
+        "consensus_proportion": 1.0,
+        "entropy_value": 0.0,
+        "reasoning": "All models agree on Classical Monocytes based on CD14, LYZ, FCN1 markers."
+      }
+    }
+  }
+}

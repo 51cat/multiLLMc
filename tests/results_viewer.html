@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiLLMc - 细胞类型注释结果</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .metadata-bar {
+            background: rgba(255,255,255,0.95);
+            border-radius: 12px;
+            padding: 15px 25px;
+            margin-bottom: 25px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .metadata-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .metadata-item .label {
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .metadata-item .value {
+            color: #333;
+            font-weight: 600;
+            background: #f0f0f0;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+        
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 20px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+        
+        .card-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+        }
+        
+        .card-header .cluster-id {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .card-header .consensus-type {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+        
+        .card-body {
+            padding: 20px;
+        }
+        
+        .section {
+            margin-bottom: 15px;
+        }
+        
+        .section-title {
+            font-size: 0.85rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .marker-genes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        
+        .gene-tag {
+            background: #e8f4fd;
+            color: #1976d2;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        .consensus-bar {
+            background: #f0f0f0;
+            border-radius: 10px;
+            height: 24px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .consensus-fill {
+            background: linear-gradient(90deg, #4caf50, #8bc34a);
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 10px;
+            color: white;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: width 0.5s ease;
+        }
+        
+        .model-annotations {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .model-item {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 12px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .model-item .model-name {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 4px;
+            font-size: 0.9rem;
+        }
+        
+        .model-item .celltype {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        
+        .model-item .detail {
+            color: #666;
+            font-size: 0.85rem;
+            margin-top: 6px;
+            line-height: 1.4;
+        }
+        
+        .review-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        
+        .review-badge.passed {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+        
+        .review-badge.failed {
+            background: #ffebee;
+            color: #c62828;
+        }
+        
+        .reasoning-box {
+            background: #f5f5f5;
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 0.85rem;
+            color: #555;
+            line-height: 1.5;
+            border-left: 3px solid #667eea;
+        }
+        
+        .stats-row {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .stat-item {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .stat-value {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #333;
+        }
+        
+        .stat-label {
+            font-size: 0.75rem;
+            color: #888;
+            margin-top: 2px;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 50px;
+            color: #666;
+        }
+        
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .footer {
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+            margin-top: 30px;
+            padding: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .metadata-bar {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧬 MultiLLMc</h1>
+            <div class="subtitle">多LLM协作细胞类型注释结果</div>
+        </div>
+        
+        <div class="metadata-bar" id="metadata">
+            <!-- 动态填充 -->
+        </div>
+        
+        <div class="cards-grid" id="cards">
+            <!-- 动态填充 -->
+        </div>
+        
+        <div class="footer">
+            MultiLLMc - Multi-LLM Collaborative Cell Type Annotation
+        </div>
+    </div>
+
+    <script>
+        // 加载结果数据
+        let resultsData = null;
+        
+        async function loadResults() {
+            try {
+                const response = await fetch('test_results.json');
+                resultsData = await response.json();
+                renderResults();
+            } catch (error) {
+                document.getElementById('cards').innerHTML = `
+                    <div class="loading">
+                        <div class="loading-spinner"></div>
+                        <p>等待测试结果...</p>
+                        <p style="font-size: 0.9rem; margin-top: 10px;">请先运行 python tests/test_full.py</p>
+                    </div>
+                `;
+            }
+        }
+        
+        function renderResults() {
+            if (!resultsData) return;
+            
+            // 渲染元数据
+            const metadata = resultsData.metadata;
+            document.getElementById('metadata').innerHTML = `
+                <div class="metadata-item">
+                    <span class="label">物种:</span>
+                    <span class="value">${metadata.species}</span>
+                </div>
+                <div class="metadata-item">
+                    <span class="label">组织:</span>
+                    <span class="value">${metadata.tissue}</span>
+                </div>
+                <div class="metadata-item">
+                    <span class="label">模型:</span>
+                    <span class="value">${metadata.models.join(', ')}</span>
+                </div>
+                <div class="metadata-item">
+                    <span class="label">聚类数:</span>
+                    <span class="value">${Object.keys(resultsData.clusters).length}</span>
+                </div>
+            `;
+            
+            // 渲染卡片
+            const cardsContainer = document.getElementById('cards');
+            cardsContainer.innerHTML = '';
+            
+            for (const [clusterId, clusterData] of Object.entries(resultsData.clusters)) {
+                const card = createClusterCard(clusterId, clusterData);
+                cardsContainer.appendChild(card);
+            }
+        }
+        
+        function createClusterCard(clusterId, data) {
+            const card = document.createElement('div');
+            card.className = 'card';
+            
+            const consensus = data.consensus || {};
+            const modelAnnotations = data.model_annotations || {};
+            const markerGenes = data.marker_genes || [];
+            
+            const consensusProportion = (consensus.consensus_proportion || 0) * 100;
+            const consensusType = consensus.consensus_cell_type || 'Unknown';
+            const isConsensusReached = consensus.is_consensus_reached || false;
+            
+            // 生成模型注释HTML
+            let modelsHtml = '';
+            for (const [modelName, annotation] of Object.entries(modelAnnotations)) {
+                const celltype = annotation.celltype || 'Unknown';
+                const detail = annotation.detail || '';
+                const review = annotation.review || {};
+                const reliability = review.reliability_score || 0;
+                const isPassed = reliability >= 60;
+                
+                modelsHtml += `
+                    <div class="model-item">
+                        <div>
+                            <span class="model-name">${modelName}</span>
+                            <span class="review-badge ${isPassed ? 'passed' : 'failed'}">
+                                ${isPassed ? '✓ 通过' : '✗ 未通过'} (${reliability.toFixed(0)}分)
+                            </span>
+                        </div>
+                        <div class="celltype">${celltype}</div>
+                        ${detail ? `<div class="detail">${detail}</div>` : ''}
+                    </div>
+                `;
+            }
+            
+            card.innerHTML = `
+                <div class="card-header">
+                    <div class="cluster-id">${clusterId}</div>
+                    <div class="consensus-type">${consensusType}</div>
+                </div>
+                <div class="card-body">
+                    <div class="section">
+                        <div class="section-title">标记基因</div>
+                        <div class="marker-genes">
+                            ${markerGenes.map(g => `<span class="gene-tag">${g}</span>`).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="section">
+                        <div class="section-title">共识比例</div>
+                        <div class="consensus-bar">
+                            <div class="consensus-fill" style="width: ${consensusProportion}%">
+                                ${consensusProportion.toFixed(0)}%
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="stats-row">
+                        <div class="stat-item">
+                            <div class="stat-value">${consensus.entropy_value?.toFixed(2) || '-'}</div>
+                            <div class="stat-label">熵值</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">${isConsensusReached ? '✓' : '✗'}</div>
+                            <div class="stat-label">达成共识</div>
+                        </div>
+                    </div>
+                    
+                    <div class="section">
+                        <div class="section-title">模型注释</div>
+                        <div class="model-annotations">
+                            ${modelsHtml}
+                        </div>
+                    </div>
+                    
+                    ${consensus.reasoning ? `
+                    <div class="section">
+                        <div class="section-title">共识推理</div>
+                        <div class="reasoning-box">${consensus.reasoning}</div>
+                    </div>
+                    ` : ''}
+                </div>
+            `;
+            
+            return card;
+        }
+        
+        // 初始化
+        loadResults();
+    </script>
+</body>
+</html>

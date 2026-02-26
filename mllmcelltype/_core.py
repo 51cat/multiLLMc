@@ -38,11 +38,15 @@ class BaseSeminar:
     @staticmethod
     def get_best_model_for_check(model_list: List[str]) -> str:
         """Get the best model for checking."""
+        if not model_list:
+            raise ValueError("Model list cannot be empty")
         return model_list[0]
     
     @staticmethod
     def get_best_model_for_review(model_list: List[str]) -> str:
         """Get the best model for review."""
+        if not model_list:
+            raise ValueError("Model list cannot be empty")
         return model_list[0]
 
     @staticmethod

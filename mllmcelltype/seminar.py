@@ -68,7 +68,7 @@ class Seminar(BaseSeminar):
         """Make initial annotation prompt."""
         self._parse_marker_dict()
         cluster_keys = list(self.marker_dict.keys())
-        cluster_list = cluster_keys[0:2] if len(cluster_keys) >= 2 else cluster_keys[0]
+        cluster_list = cluster_keys if len(cluster_keys) >= 1 else []
         
         self.promopt = make_prompt(
             task_name,
@@ -94,6 +94,40 @@ class Seminar(BaseSeminar):
         answer_dict['token'] = get_token_counts(response)
         return dict(answer_dict)
 
+    def _parse_response_content(self, content: str) -> Dict:
+        """Parse response content, supporting multiple formats."""
+        content = content.strip()
+        
+        for char in ["'", '"']:
+            if content.startswith(char) and content.endswith(char):
+                content = content[1:-1]
+        
+        if content.startswith('```'):
+            lines = content.split('\n')
+            content = '\n'.join(lines[1:-1] if lines[-1].startswith('```') else lines[1:])
+        
+        try:
+            return json.loads(content)
+        except json.JSONDecodeError:
+            pass
+        
+        result = {'celltype': {}, 'detail': {}}
+        lines = [l.strip() for l in content.split('\n') if l.strip()]
+        
+        for line in lines:
+            if '::' in line:
+                parts = line.split('::')
+                if len(parts) >= 2:
+                    cluster_id = parts[0].strip()
+                    celltype = parts[1].strip()
+                    detail = parts[2].strip() if len(parts) >= 3 else ""
+                    
+                    if cluster_id.startswith('cluster'):
+                        result['celltype'][cluster_id] = celltype
+                        result['detail'][cluster_id] = detail
+        
+        return result if result['celltype'] else {}
+
     @add_log
     def start(self) -> None:
         """Start the annotation process with all models."""
@@ -114,12 +148,22 @@ class Seminar(BaseSeminar):
                 model_response = model.invoke(self.promopt)
                 
                 content = str(model_response.content)
-                content = content.strip("'").strip('"')
-                response = json.loads(content)
+                print(f"\n[{model_use}] Raw response length: {len(content)} chars")
+                
+                response = self._parse_response_content(content)
+                
+                if not response or not response.get('celltype'):
+                    print(f"[{model_use}] Warning: Could not parse response properly")
+                    print(f"[{model_use}] Response preview: {content[:200]}...")
+                    continue
                 
                 self.response_final_dict.update({model_use: response})
+                print(f"[{model_use}] Parsed {len(response.get('celltype', {}))} clusters")
+                
             except Exception as e:
                 print(f'skip {model_use}: {e}')
+                import traceback
+                traceback.print_exc()
                 continue
 
             if hasattr(self.start, 'logger'):
