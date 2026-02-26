@@ -93,3 +93,5 @@ Thumbs.db
 *.log
 results/
 output/
+*.h5ad
+*.sif

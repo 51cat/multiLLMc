@@ -1,0 +1,154 @@
+{
+    "gemini-3-pro-preview": {
+        "cluster_1": {
+            "cluster_name": "cluster_1",
+            "celltype": "Epithelial Cells",
+            "subcelltype": "Ovarian Cancer Cells (PVT1+)",
+            "reasoning": "High expression of the oncogenic lncRNA PVT1 and epithelial markers PLXNB1/MAPK15, combined with the absence of stromal or immune markers, identifies this cluster as malignant epithelial tumor cells."
+        },
+        "cluster_2": {
+            "cluster_name": "cluster_2",
+            "celltype": "Fibroblasts",
+            "subcelltype": "Cancer-Associated Fibroblasts (myCAF)",
+            "reasoning": "Defined by high expression of COL11A1, INHBA, and MMP11. COL11A1 is a specific marker for myofibroblastic CAFs in ovarian cancer, associated with matrix remodeling and poor prognosis."
+        },
+        "cluster_3": {
+            "cluster_name": "cluster_3",
+            "celltype": "Stromal Cells",
+            "subcelltype": "Smooth Muscle Cells",
+            "reasoning": "Characterized by canonical smooth muscle markers MYH11, CNN1, and SYNM, indicating a contractile stromal phenotype distinct from fibroblasts."
+        },
+        "cluster_4": {
+            "cluster_name": "cluster_4",
+            "celltype": "Epithelial Cells",
+            "subcelltype": "Fallopian Tube Secretory Cells (FTSEC)",
+            "reasoning": "Expression of SOX9, DACH1, and FAM107A aligns with the secretory epithelial lineage of the fallopian tube, which is the putative cell of origin for high-grade serous ovarian carcinoma."
+        },
+        "cluster_5": {
+            "cluster_name": "cluster_5",
+            "celltype": "Myeloid Cells",
+            "subcelltype": "Tumor-Associated Macrophages (M2-like)",
+            "reasoning": "Strong expression of CD163, MRC1 (CD206), and C1QC identifies these as immunosuppressive, M2-polarized tumor-associated macrophages."
+        },
+        "cluster_6": {
+            "cluster_name": "cluster_6",
+            "celltype": "Stromal Cells",
+            "subcelltype": "Vascular Smooth Muscle Cells",
+            "reasoning": "Expresses MYH11 and CNN1 like cluster 3, but distinguishes itself with MYLK and SYNPO2, suggesting a vascular-associated contractile state."
+        },
+        "cluster_7": {
+            "cluster_name": "cluster_7",
+            "celltype": "Epithelial Cells",
+            "subcelltype": "Cycling Tumor Cells (G2/M Phase)",
+            "reasoning": "Enriched for G2/M phase markers such as AURKB, CDK1, and CDCA3, indicating a subpopulation of tumor cells undergoing active division."
+        },
+        "cluster_8": {
+            "cluster_name": "cluster_8",
+            "celltype": "Epithelial Cells",
+            "subcelltype": "Ovarian Cancer Cells (MUC16+)",
+            "reasoning": "Dominant expression of MUC16 (CA125), the clinical biomarker for ovarian cancer, along with stress markers like LCN2, defines this differentiated tumor cluster."
+        },
+        "cluster_9": {
+            "cluster_name": "cluster_9",
+            "celltype": "Fibroblasts",
+            "subcelltype": "Universal/Adventitial Fibroblasts",
+            "reasoning": "Markers such as PI16, DPT, and C7 are characteristic of universal or adventitial fibroblasts, representing a resting or progenitor-like stromal state distinct from activated CAFs."
+        },
+        "cluster_10": {
+            "cluster_name": "cluster_10",
+            "celltype": "Epithelial Cells",
+            "subcelltype": "Cycling Tumor Cells (G1/S Phase)",
+            "reasoning": "Expression of CCNE1, MCM complex genes (MCM2/4), and PCNA-associated factors places these tumor cells in the G1/S transition of the cell cycle."
+        },
+        "cluster_11": {
+            "cluster_name": "cluster_11",
+            "celltype": "Fibroblasts",
+            "subcelltype": "Wnt-modulating Fibroblasts",
+            "reasoning": "Characterized by Wnt pathway inhibitors SFRP4, SFRP1, and APCDD1, along with DCN, suggesting a stromal subset involved in regulating tumor signaling pathways."
+        },
+        "cluster_12": {
+            "cluster_name": "cluster_12",
+            "celltype": "Epithelial Cells",
+            "subcelltype": "Hypoxic Tumor Cells",
+            "reasoning": "Upregulation of glycolysis and hypoxia-response genes SLC2A1 (GLUT1), VEGFA, NDRG1, and BNIP3 identifies tumor cells in a hypoxic microenvironment."
+        },
+        "cluster_13": {
+            "cluster_name": "cluster_13",
+            "celltype": "Endothelial Cells",
+            "subcelltype": "Endothelial Cells",
+            "reasoning": "Classic endothelial markers CLDN5, SELP, TEK, and EGFL7 confirm vascular identity. High SELP suggests an activated or venous phenotype."
+        },
+        "cluster_14": {
+            "cluster_name": "cluster_14",
+            "celltype": "Epithelial Cells",
+            "subcelltype": "Cycling Tumor Cells (Mitotic)",
+            "reasoning": "High expression of TOP2A, UBE2C, CCNB1, and CENPA indicates cells in the mitotic phase of the cell cycle, representing the most actively proliferating tumor fraction."
+        },
+        "cluster_15": {
+            "cluster_name": "cluster_15",
+            "celltype": "Fibroblasts",
+            "subcelltype": "Matrix-Remodeling CAFs",
+            "reasoning": "Distinguished by extracellular matrix genes COMP, LUM, BGN, and CCN2 (CTGF), indicating a fibroblast subset driving desmoplasia and matrix deposition."
+        },
+        "cluster_16": {
+            "cluster_name": "cluster_16",
+            "celltype": "T Cells",
+            "subcelltype": "CD8+ Cytotoxic T Cells",
+            "reasoning": "Defined by CD8A, CD3E, and cytotoxic effector molecules GZMA, GZMK, and GZMH, representing the adaptive immune response within the tumor."
+        },
+        "cluster_17": {
+            "cluster_name": "cluster_17",
+            "celltype": "Mast Cells",
+            "subcelltype": "Mast Cells",
+            "reasoning": "Unambiguous expression of HDC (Histidine decarboxylase), KIT, MS4A2, and TPSAB1 (implied by CTSG/proteases) confirms mast cell identity."
+        },
+        "cluster_18": {
+            "cluster_name": "cluster_18",
+            "celltype": "Myeloid Cells",
+            "subcelltype": "Lipid-Associated Macrophages (TREM2+)",
+            "reasoning": "Expression of TREM2, C1QC, and lipid metabolism genes marks this as a specific macrophage subset often found in lipid-rich tumor environments."
+        },
+        "cluster_19": {
+            "cluster_name": "cluster_19",
+            "celltype": "Stromal Cells",
+            "subcelltype": "Pericytes",
+            "reasoning": "Markers RGS5, GJC1, and NOTCH3 signaling targets (HEYL) are characteristic of pericytes wrapping tumor vasculature."
+        },
+        "cluster_20": {
+            "cluster_name": "cluster_20",
+            "celltype": "Epithelial Cells",
+            "subcelltype": "HNF1B+ Secretory Epithelial Cells",
+            "reasoning": "Expression of HNF1B, PAX2, and LGR5 identifies a secretory epithelial lineage, potentially representing Clear Cell carcinoma features or secretory fallopian tube precursors."
+        },
+        "cluster_21": {
+            "cluster_name": "cluster_21",
+            "celltype": "Stromal Cells",
+            "subcelltype": "Immunomodulatory Pericytes",
+            "reasoning": "Co-expression of pericyte marker KCNJ8 with chemokine CCL19 and STEAP4 suggests a specialized stromal cell interacting with the immune system."
+        },
+        "cluster_22": {
+            "cluster_name": "cluster_22",
+            "celltype": "Endothelial Cells",
+            "subcelltype": "Tumor-Associated Endothelial Cells (Tip Cells)",
+            "reasoning": "High expression of ESM1, FLT1, PLVAP, and ANGPT2 identifies angiogenic endothelial cells, specifically tip cells involved in neovascularization."
+        },
+        "cluster_23": {
+            "cluster_name": "cluster_23",
+            "celltype": "Mesothelial Cells",
+            "subcelltype": "Mesothelial Cells",
+            "reasoning": "Specific expression of PRG4 (Lubricin), CALB2, UPK3B, and ANXA8 confirms mesothelial identity, likely from the ovarian surface or peritoneum."
+        },
+        "cluster_24": {
+            "cluster_name": "cluster_24",
+            "celltype": "Epithelial Cells",
+            "subcelltype": "Basal-like Tumor Cells",
+            "reasoning": "Markers GABRP, AGR2, and TRIM29 are associated with basal-like or specific secretory phenotypes in ovarian and breast cancers."
+        },
+        "cluster_25": {
+            "cluster_name": "cluster_25",
+            "celltype": "Epithelial Cells",
+            "subcelltype": "Ciliated Fallopian Tube Epithelial Cells",
+            "reasoning": "The presence of multiple cilia-related genes, including DNAH11, TEKT1, and CFAP100, definitively identifies these as ciliated epithelial cells of the fallopian tube."
+        }
+    }
+}
