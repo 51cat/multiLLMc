@@ -2,50 +2,66 @@
   "metadata": {
     "species": "human",
     "tissue": "PBMC",
-    "models": ["grok-3", "deepseek-v3.2", "qwen-plus"],
+    "models": [
+      "grok-3",
+      "deepseek-v3.2",
+      "qwen-plus"
+    ],
     "provider": "n1n"
   },
   "clusters": {
     "cluster_0": {
       "cluster_id": "cluster_0",
-      "marker_genes": ["CD3D", "CD3E", "CD3G", "IL7R", "TCF7"],
-      "model_annotations": {
+      "marker_genes": [
+        "CD3D",
+        "CD3E",
+        "CD3G",
+        "IL7R",
+        "TCF7"
+      ],
+      "initial_annotations": {
         "grok-3": {
           "celltype": "Naive CD4+ T Cells",
-          "detail": "CD3D, CD3E, CD3G are canonical T cell markers. TCF7 and IL7R indicate naive phenotype.",
+          "detail": "Reasoning: High expression of CD3D, CD3E, CD3G (T cell markers), IL7R (associated with naive T cells), and TCF7 (transcription factor for naive state), indicating a naive CD4+ T cell population over effector or memory subsets due to lack of activation or memory markers like CD69 or CCR7."
         },
         "deepseek-v3.2": {
           "celltype": "Naive CD4+ T",
-          "detail": "High expression of pan-T cell markers (CD3D/E/G) and IL7R/TCF7 indicates a naive state."
+          "detail": "High expression of CD3D/E/G (pan-T cell), IL7R (naive/memory marker), and TCF7 (naive/central memory transcription factor) defines a naive T cell state; absence of CD4/CD8 markers in list suggests CD4+ default for IL7R+ naive T cells in PBMC."
         },
         "qwen-plus": {
           "celltype": "Naive CD4+ T cell",
-          "detail": "CD3D/E/G confirm T lineage; IL7R and TCF7 are canonical markers of naive CD4+ T cells."
+          "detail": "CD3D/E/G confirm T lineage; IL7R and TCF7 are canonical markers of naive and central memory CD4+ T cells, with absence of activation (no IFNG, GZMB), exhaustion (no PDCD1, HAVCR2), or regulatory (no FOXP3, CTLA4) markers — consistent with early-differentiated, quiescent CD4+ T cells."
         }
       },
       "consensus": {
-        "consensus_cell_type": "Naive CD4+ T Cells",
+        "consensus_cell_type": "Naive CD4+ T Cell",
         "is_consensus_reached": true,
         "consensus_proportion": 1.0,
         "entropy_value": 0.0,
-        "reasoning": "All three models agree on Naive CD4+ T Cells based on CD3D, CD3E, CD3G, IL7R, TCF7 markers."
+        "reasoning": "All three models (grok-3, deepseek-v3.2, qwen-plus) agree on the primary lineage and subtype as Naive CD4+ T Cells, with minor variations in nomenclature ('Naive CD4+ T Cells', 'Naive CD4+ T', 'Naive CD4+ T cell') that are semantically equivalent. The biological evidence provided across all models is consistent and robust, citing canonical T cell markers (CD3D, CD3E, CD3G) for lineage identification, and specific markers of naive state (IL7R, TCF7) that distinguish this population from activated, memory, or regulatory T cell subsets in PBMC. Notably, qwen-plus provides additional depth by ruling out alternative states through the absence of activation (IFNG, GZMB), exhaustion (PDCD1, HAVCR2), and regulatory (FOXP3, CTLA4) markers, reinforcing the naive phenotype. The lack of contradictory evidence or mutually exclusive marker expression rules out the possibility of a doublet. Given the perfect agreement on lineage and subtype, supported by biologically sound reasoning and canonical marker evidence, the consensus is unequivocally reached."
       }
     },
     "cluster_1": {
       "cluster_id": "cluster_1",
-      "marker_genes": ["CD79A", "CD79B", "MS4A1", "IGHM", "IGKC"],
-      "model_annotations": {
+      "marker_genes": [
+        "CD79A",
+        "CD79B",
+        "MS4A1",
+        "IGHM",
+        "IGKC"
+      ],
+      "initial_annotations": {
         "grok-3": {
           "celltype": "Naive B Cells",
-          "detail": "CD79A, CD79B, MS4A1 are B cell markers. IGHM and IGKC indicate naive B cells."
+          "detail": "Reasoning: Strong expression of CD79A, CD79B, MS4A1 (B cell-specific markers), and IGHM, IGKC (immunoglobulin components), pointing to naive B cells rather than memory or plasma cells due to absence of CD27 or IGHG1."
         },
         "deepseek-v3.2": {
           "celltype": "Naive B",
-          "detail": "Canonical B cell markers (CD79A/B, MS4A1) with IGHM and IGKC indicating naive B cells."
+          "detail": "Co-expression of CD79A/B (B cell receptor), MS4A1 (CD20), and IGHM/IGKC (IgM and kappa light chain) defines mature, naive B cells; absence of class-switched or memory markers (e.g., CD27, IgG) specifies naive subset."
         },
         "qwen-plus": {
-          "celltype": "IgM+ naive B cell",
-          "detail": "CD79A/B and MS4A1 confirm B lineage; IGHM and IGKC indicate immunoglobulin expression for naive B cells."
+          "celltype": "IgM+ B cell (Naive B)",
+          "detail": "CD79A/B and MS4A1 (CD20) confirm B lineage; IGHM and IGKC indicate immunoglobulin expression, with IGHM dominance and lack of class-switched isotypes (e.g., IGHG, IGHA) or plasma cell markers (e.g., PRDM1, XBP1, SDCCAG8) — definitive for naive IgM+ B cells."
         }
       },
       "consensus": {
@@ -53,24 +69,30 @@
         "is_consensus_reached": true,
         "consensus_proportion": 1.0,
         "entropy_value": 0.0,
-        "reasoning": "All models agree on Naive B Cells based on CD79A, CD79B, MS4A1, IGHM markers."
+        "reasoning": "All three models (grok-3, deepseek-v3.2, qwen-plus) unequivocally identify the cells in cluster_1 as naive B cells, with consistent nomenclature variations ('Naive B Cells', 'Naive B', 'IgM+ B cell (Naive B)'). The biological evidence provided across all models is robust and aligned, citing canonical B cell markers such as CD79A, CD79B, and MS4A1 (CD20), which are definitive for B lineage identification in human PBMC. Additionally, the expression of IGHM and IGKC, coupled with the absence of memory (CD27) or class-switched immunoglobulin markers (e.g., IGHG1, IGHA), strongly supports the naive B cell subset classification over memory or plasma cells. The lack of plasma cell-specific markers (e.g., PRDM1, XBP1) further corroborates this annotation. The consensus is clear, with no dissenting opinions or evidence of mutually exclusive marker co-expression suggestive of doublets. This annotation adheres to gold-standard criteria for single-cell genomics in PBMC datasets."
       }
     },
     "cluster_2": {
       "cluster_id": "cluster_2",
-      "marker_genes": ["CD14", "LYZ", "S100A8", "S100A9", "FCN1"],
-      "model_annotations": {
+      "marker_genes": [
+        "CD14",
+        "LYZ",
+        "S100A8",
+        "S100A9",
+        "FCN1"
+      ],
+      "initial_annotations": {
         "grok-3": {
           "celltype": "Classical Monocytes",
-          "detail": "CD14 and LYZ are hallmark markers for classical monocytes."
+          "detail": "Reasoning: High levels of CD14 (monocyte marker), LYZ, S100A8, S100A9 (myeloid-associated genes), and FCN1 (classical monocyte-specific), distinguishing this cluster as classical monocytes over non-classical monocytes due to lack of FCGR3A (CD16)."
         },
         "deepseek-v3.2": {
           "celltype": "Classical Monocytes",
-          "detail": "Strong CD14 expression with FCN1 defines classical monocytes."
+          "detail": "High CD14 with LYZ, S100A8/A9 (calprotectin), and FCN1 defines inflammatory classical monocytes; absence of FCGR3A (CD16) distinguishes from non-classical monocytes."
         },
         "qwen-plus": {
           "celltype": "Classical Monocyte",
-          "detail": "CD14 and LYZ are classical monocyte markers; FCN1 further defines this subset."
+          "detail": "CD14 and LYZ are core monocyte markers; S100A8/S100A9 and FCN1 are highly specific for classical (inflammatory) monocytes, distinguishing them from non-classical (CD16+/FCGR3A+, VCAN+, CX3CR1+) or intermediate monocytes — no expression of dendritic cell markers (e.g., CLEC9A, CD1C, FCER1A) or neutrophil genes (e.g., MPO, ELANE)."
         }
       },
       "consensus": {
@@ -78,7 +100,7 @@
         "is_consensus_reached": true,
         "consensus_proportion": 1.0,
         "entropy_value": 0.0,
-        "reasoning": "All models agree on Classical Monocytes based on CD14, LYZ, FCN1 markers."
+        "reasoning": "All three models (grok-3, deepseek-v3.2, qwen-plus) unanimously identify the cluster as Classical Monocytes, with consistent and biologically sound evidence. The high expression of canonical monocyte markers such as CD14, LYZ, S100A8, and S100A9 (calprotectin) strongly supports a myeloid lineage, specifically monocytes. Furthermore, the presence of FCN1, a marker associated with classical (inflammatory) monocytes, and the absence of FCGR3A (CD16), a hallmark of non-classical monocytes, provide clear distinction from other monocyte subsets. The lack of dendritic cell markers (e.g., CLEC9A, CD1C, FCER1A) or neutrophil markers (e.g., MPO, ELANE) further rules out alternative lineages. The nomenclature variation ('Classical Monocytes' vs. 'Classical Monocyte') is trivial and does not impact the consensus on the primary lineage. This annotation aligns with established PBMC cell type classifications and is supported by robust marker-based evidence."
       }
     }
   }
